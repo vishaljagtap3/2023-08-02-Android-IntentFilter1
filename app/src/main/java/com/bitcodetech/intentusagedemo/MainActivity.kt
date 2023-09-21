@@ -23,6 +23,19 @@ class MainActivity : AppCompatActivity() {
                 .build()
         )
 
+        binding.btnSendBroadcast.setOnClickListener {
+            val intent = Intent("in.bitcode.download.COMPLETE")
+            intent.putExtra("path", "/storage/emulated/0/bitcode/video.mp4")
+            sendBroadcast(intent)
+        }
+
+        binding.btnSendStickyBroadcast.setOnClickListener {
+            val intent = Intent("in.bitcode.download.COMPLETE")
+            intent.putExtra("path", "/storage/emulated/0/bitcode/video.mp4")
+            //sendBroadcast(intent)
+            sendStickyBroadcast(intent)
+        }
+
         binding.img.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK)
             intent.type = "image/*"

@@ -7,6 +7,18 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btnSendStickyBroadcast"
+        android:text="Send Sticky Broadcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnSendBroadcast"
+        android:text="Send Broadcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <ImageView
         android:src="@mipmap/ic_launcher"
         android:id="@+id/img"
